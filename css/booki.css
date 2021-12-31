@@ -4,7 +4,13 @@
     src: url(https://kit.fontawesome.com/9c8c1704d1.js);
 }
 
-/*Utilisation de la police Raleway et de deux polices de substitution*/
+/*Utilisation de polices de substitution en plus de la police Raleway */
+
+body {
+font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+
 /*Définition des principaux styles utilisés avec la police Raleway*/
 
 h1{
@@ -188,10 +194,10 @@ margin: 25px 25px 25px 10px;
 } 
 
 .titre-filtres-recherche-hebergement{  
-margin-right: 30px;  
+margin-right: 15px;  
 font-weight: bolder; 
 font-size: 18px;
-padding: 0 5px;
+padding-left: 5px;
 text-align: center;
 }
 
@@ -199,17 +205,18 @@ text-align: center;
 display: flex;
 align-items: center; 
 justify-content: space-around;
-height: 50px;
+height: 44px;
 border: 2px solid #F2F2F2;
-border-radius: 30px;
-margin-right: 25px;
-padding: 0 10px px 0;                
+border-radius: 50px;
+margin-right: 20px;
+           
 }
 
 .filtre-hebergement i{
 display: flex;
 align-items: center; 
 justify-content: center;
+border-radius: 50%;
 }
 
 .filtre-icone{ 
@@ -297,9 +304,10 @@ padding: 5px 5px 10px 5px;
 
 .photo-card-hebergements img{ 
 height: 130px;
-width: 260px;
+width: 100%;
 border-radius: 15px 15px 0 0;
 object-fit: cover;
+object-position: center;
 
 }
 
@@ -308,6 +316,7 @@ display: flex;
 flex-direction: column; 
 justify-content: flex-start;
 padding-left: 5px;
+width: 260px;
   
 }
 
@@ -482,8 +491,7 @@ figure {
     flex-wrap: wrap;
     flex-basis: 23% ;
     max-width: 350px;
-     margin: auto;
-     box-shadow: 4 4 10px 0 #E0E0E0;     
+    box-shadow: 4 4 10px 0 #E0E0E0;     
 }
 
 
@@ -500,7 +508,7 @@ figcaption{
     
 .grande-photo-activites1 img, .grande-photo-activites4 img{
    border-radius: 30px 30px 0 0;
-  height: 430px;
+  height: 400px;
   width: 100%;
     object-fit: cover;
     object-position: center;
@@ -515,7 +523,7 @@ figcaption{
 
 .petite-photo-activites2 img, .petite-photo-activites5 img{
     border-radius: 30px 30px 0 0;
-  height: 200px;
+  height: 150px;
   width: 330px;
    max-width: 100%;
     object-fit: cover;
@@ -583,6 +591,7 @@ line-height: 2em;
     body {
     display: flex;  
     min-height: 100vh;
+    width: 95%;
     }
 
    
@@ -600,6 +609,7 @@ line-height: 2em;
             flex-wrap: wrap;             
             min-height: 100vh;
             margin: auto;
+            width: 92%;
             } 
        
      
@@ -616,16 +626,22 @@ line-height: 2em;
             
         .navbar {
             display: flex;
-            justify-content: space-around;        
+            justify-content: flex-end;
             order: -1;
         }
 
+      
+
         .navbar a:hover{    
+        color: #0065FC;
         border-top-color: transparent;    
-        border-bottom: 3px solid gray;              
+        border-bottom: 3px solid #0065FC;   
+                  
         }
      
-     
+        .titre-formulaire {
+            margin-top: 25px;
+        }
 
         .liste-filtres-recherche-hebergement {
             display: flex;
@@ -658,6 +674,11 @@ line-height: 2em;
             width: 80%;
             font-size: 1.5em;   
         }
+
+        .card-bloc-hebergements {
+            width: 50%;
+        }
+
 
         .bloc-toutes-activites {
             display: flex;
@@ -711,10 +732,11 @@ line-height: 2em;
 
         .navbar a:hover{    
         border-top-color: transparent;    
-        border-bottom: 3px solid gray;              
+        border-bottom: 3px solid #0065FC;
+        width: 100%;              
         }
          
-
+       
         .bouton-rechercher {            
         display: none;
         }
@@ -738,8 +760,12 @@ line-height: 2em;
         .contenu-bloc-hebergements {
         order: 2;
         background-color: white;
-        width: 90%;
-      
+        margin: 0;
+         
+        }
+
+        .card-bloc-hebergements {
+            width: 100%;
         }
 
         .bloc-toutes-activites {
@@ -748,6 +774,28 @@ line-height: 2em;
             justify-content: space-between;
             font-size: 1.5em; 
           
+            }
+
+
+            figure .grande-photo-activites1 {
+                height: 40%;
+            }
+
+
+            .petite-photo-activites2 img, .petite-photo-activites5 img{
+                border-radius: 30px 30px 0 0;
+                width: 330px;
+               max-width: 100%;
+                object-fit: cover;
+                object-position: center;
+                
+            }
+            
+            .petite-photo-activites3 img,  .petite-photo-activites6 img {
+                border-radius: 30px 30px 0 0;
+                max-width: 100%;
+                 object-fit: cover;
+                 object-position: center;
             }
         
         .contenu-footer {
