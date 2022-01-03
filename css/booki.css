@@ -13,23 +13,25 @@ font-family: Raleway, Arial, Helvetica, sans-serif;
 
 /*Définition des principaux styles utilisés avec la police Raleway*/
 
+/*Utilisation de l'unité relative em pour adapter la taille du texte à partir de la taille de référence de 16px utilisée par les navigateurs */
+
 h1{
-font-size: 22px;
+font-size: 1.375em;  /*22px / 16px */
 
 }
 
 h2{
-font-size: 20px;
+font-size: 1.1875em; /*19px / 16px */
 
 }
 
 h3{
-font-size: 18px;
+font-size: 0.9375em; /*15px / 16px */
 
 }
 
 p{
-font-size: 14px;
+font-size: 0.875em; /*14px / 16px */
 }
 
 /*Définition des couleurs de la charte*/
@@ -154,14 +156,14 @@ font-weight: bold;
 .form input[type=search]{
 padding: 16px;
 border: none;
-margin-top: 0px;         
+margin-top: 0;         
 font-size: 20px;
 border: solid #F2F2F2;    
 }
 
 input::placeholder {
     color: black;
-   font-weight: 600;
+   font-weight: 550;
     }
 
 .bouton-rechercher{
@@ -204,6 +206,10 @@ font-weight: bolder;
 font-size: 18px;
 padding-left: 5px;
 text-align: center;
+}
+
+.items-filtre-hebergement{
+    display: flex;
 }
 
 .filtre-hebergement{     
@@ -357,6 +363,7 @@ color:#F2F2F2;
 .afficher-plus p {
 
 padding: 20px; 
+font-size: 0.9375em;
 font-weight: bold;   
 }
 
@@ -367,8 +374,8 @@ font-weight: bold;
     flex: 1 1 auto;
     flex-direction: column;
     margin-right: 5px;
-    margin-left: 15px;
-    padding: 0 20px 20px 20px;
+    margin-left: 35px;
+    padding: 0 30px 20px 30px;
     background-color: #f2f2f2; 
     border-radius: 15px;  
     
@@ -487,9 +494,8 @@ color:#F2F2F2;
 .bloc-toutes-activites{
     display: flex;
     justify-content: space-between;
-    
     padding-bottom: 20px;
-    margin-bottom: 35px;               
+               
 }
 
 .colonne-grande-photo {
@@ -643,11 +649,7 @@ line-height: 2em;
           height: auto;
       }
        
-        #bloc-page {
-            width: 100%;
-            margin: 5px;
-            flex-wrap: wrap; 
-        }
+      
 
         .en-tete {
             padding: 35px 10px 10px 35px;
@@ -700,7 +702,7 @@ line-height: 2em;
             display: flex;
             flex-direction: column;
             width: 100%;
-            font-size: 1.5em; 
+            font-size: 1.2em; 
             margin-bottom: 20px;         
         }
 
@@ -710,21 +712,20 @@ line-height: 2em;
             flex-direction: column;
             align-items: flex-start;
             width: 100%;
-            font-size: 1.5em;   
+            font-size: 1.2em;   
         }
 
         .card-bloc-hebergements {
-            width: 100%;
+            flex: 2 0 100%;
         }
 
 
         #contenu-bloc-activites {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            font-size: 1.5em; 
-            width: 100
-            
-            %;
+            font-size: 1.2em; 
+            width: 100%;
         }
 
         
@@ -744,46 +745,22 @@ line-height: 2em;
 
      @media (max-width: 575.98px){ 
 
-        h1{
-            font-size: 21px;
-            
-            }
-            
-            h2{
-            font-size: 19px;
-            
-            }
-            
-            h3{
-            font-size: 17px;
-            
-            }
-            
-            p{
-            font-size: 14px;
-            }
-
+        
         #body{
             display: flex;  
             flex-direction: column;
             flex-wrap: wrap;
-                                         
+         
+                                       
         }
-
-        #bloc-page{
-            display: flex;  
-            flex-direction: column;
-            flex-wrap: wrap;
-                                         
-        }
-
-       
+    
+      
         .en-tete {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 90%;
+           max-width: 100%;
         }
 
         .logo-booki{                 
@@ -792,8 +769,7 @@ line-height: 2em;
         }
             
         .navbar {
-            display: flex;
-            justify-content: space-around;        
+            display: flex;               
             order: -1;
         }
 
@@ -802,12 +778,8 @@ line-height: 2em;
         border-bottom: 3px solid #0065FC;
         }
       
-       li a:hover {  
-        width: 300px;
-            }
-
-
-        .bouton-rechercher {            
+           
+    .bouton-rechercher {            
         display: none;
         }
 
@@ -818,57 +790,67 @@ line-height: 2em;
         color: white;   
         }
 
-      .titre-filtres-recherche-hebergement {
-          margin-right: 33px;
-      }
+        .titre-formulaire, .form {
+            margin-left: 10px;
+        }
 
-     .liste-filtres-recherche-hebergement{
-         width: 80%;
-     }
+       .liste-filtres-recherche-hebergement {
+           width: 80%;
+       }
 
+        .items-filtre-hebergement {
+            display: flex;
+            flex-wrap: wrap; 
+                       
+        }
+
+         
      .contenu-bloc-populaires {
         order: 1;            
         }
 
-        .liste-hebergements {
-            max-width: 100%;
-        }
-          
+                
         .contenu-bloc-hebergements {
         order: 2;
         background-color: white;
-        margin: 0;
-        width: 90%;
+        width: 100%;
          
         }
+
+       
 
         .card-bloc-hebergements img {
             max-width: 100%;
         }
 
         .card-bloc-populaires {
-            width: 80%;
+            width: 100%;
         }
+
+      
 
         .bloc-toutes-activites {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            font-size: 1.5em; 
+            font-size: 1.2em; 
+            width: 100%; 
+            margin: 0;     
+         }
+
+        .bloc-toutes-activites figure{
+            margin-bottom: 20px;
             width: 100%;
-                      
-            }
+                 
+         }
 
-            .bloc-toutes-activites figure{
-                margin-bottom: 20px;
-              
-                }
+        
 
-            .bloc-toutes-activites img {
-                display: flex;
-                flex-direction: column;
-                max-width: 100%;
-                max-height: 140px;
+         .bloc-toutes-activites img {
+            display: flex;
+            flex-direction: column;
+          max-width: 100%;
+          max-height: 140px;
             
                 }
 
