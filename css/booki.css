@@ -44,16 +44,15 @@ a {
   color: black;
 }
 
-/*Le body est transformé en container flex et ses éléments sont centrés*/
+/*Le body a la propriété box-sizing et une hauteur de viewport de 100vh*/
 body {
-  display: flex;
   box-sizing: border-box;
   min-height: 100vh;
   font-family: Raleway, arial, sans-serif;
   color: black;
 }
 
-/*La div principale de la page est transformée en container flex*/
+/*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
 #bloc-page {
   max-width: 1400px;
   margin: auto;
@@ -86,8 +85,6 @@ body {
   flex-flow: nowrap;
   justify-content: flex-end;
   list-style-type: none;
-  padding-left: 40px;
-  margin-top: 0;
 }
 
 .navbar a {
@@ -108,9 +105,9 @@ body {
   flex-direction: column;
 }
 
-.titre-formulaire {
-  margin-bottom: 20px;
-}
+.h1-formulaire, .p-formulaire {
+    text-align: left;
+  }
 
 .form {
   display: flex;
@@ -471,7 +468,10 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 0;
-  box-shadow: 4 4 10px 0 #e0e0e0;
+  box-shadow: 
+0px 0px 3px var(--grey)
+  
+
 }
 
 figcaption {
@@ -562,7 +562,7 @@ footer li {
 /*media queries*/
 
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   body {
     display: flex;
     min-height: 100vh;
@@ -581,7 +581,7 @@ footer li {
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
   body {
     display: flex;
     flex-direction: column;
@@ -603,8 +603,8 @@ footer li {
 
   .en-tete {
     padding: 35px 10px 10px 35px;
-   
-    flex-direction: row; 
+
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -624,10 +624,6 @@ footer li {
     border-top-color: transparent;
     border-bottom: 3px solid #0065fc;
     padding: 10px;
-  }
-
-  .titre-formulaire {
-    margin-top: 25px;
   }
 
   .liste-filtres-recherche-hebergement {
@@ -685,36 +681,35 @@ footer li {
 
 /*Small devices (landscape phones, less than 575px)*/
 
-@media (max-width: 574.98px) {
-  
+@media screen and (max-width: 767px) {
+
+ 
+
   h1 {
-  font-size: 1.375em; /*22px / 16px */
-}
+    font-size: 1.625em; /*26px / 16px */
+  }
 
-h2 {
-  font-size: 1.1875em; /*19px / 16px */
-}
+  h2 {
+    font-size: 1.5em; /*24px / 16px */
+  }
 
-h3 {
-  font-size: 0.9375em; /*15px / 16px */
-}
+  h3 {
+    font-size: 1.25em; /*20px / 16px */
+  }
 
-p {
-  font-size: 0.875em; /*14px / 16px */
-}
-
+  p {
+    font-size: 1.125em; /*18px / 16px */
+  }
 
   #body {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    margin: auto;
   }
 
   #bloc-page {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
   }
 
   .en-tete {
@@ -747,7 +742,12 @@ p {
 
   #recherche-hebergements {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .h1-formulaire, .p-formulaire {
+    text-align: left;
   }
 
   .bouton-rechercher {
@@ -763,12 +763,12 @@ p {
 
   .liste-filtres-recherche-hebergement {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .items-filtre-hebergement {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   #logements-region-marseille {
@@ -781,9 +781,32 @@ p {
     order: 0;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    min-width: 520px;
     margin-bottom: 20px;
   }
+
+  .titre-bloc-populaires h2 {
+    font-size: 1.625em;
+  }
+
+  .card-bloc-populaires {
+    min-width: 540px;
+    height: 200px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: -2px 4px 10px 0 #e0e0e0;
+  }
+
+   .card-bloc-populaires img {
+    min-width: 200px;
+    height: 200px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+  }
+
 
   .contenu-bloc-hebergements {
     order: 1;
@@ -792,13 +815,16 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: white;
-    width: 80%;
+    width: 100%;
   }
 
- 
+  .card-bloc-hebergements, figure {
+     box-shadow: -2px 4px 10px 0 #e0e0e0;
+  }
+
   .card-bloc-hebergements img {
-    min-width: 700px;
-    height: 280px;
+    min-width: 540px;
+    height: 220px;
     object-fit: cover;
     object-position: center;
     border-radius: 30px 30px 0 0;
@@ -813,21 +839,18 @@ p {
     font-size: 1.5em;
   }
 
-  .card-bloc-populaires {
-    width: 100%;
-  }
-
+ 
   .bloc-toutes-activites {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
   }
 
   .bloc-toutes-activites img {
-    min-width: 650px;
-    height: 300px;
+    min-width: 540px;
+    height: 220px;
     object-fit: cover;
     object-position: top;
     border-radius: 30px 30px 0 0;
@@ -841,36 +864,45 @@ p {
     font-size: 1.75em;
   }
 
+  .colonne-grande-photo, .colonne-petites-card-activites {
+    justify-content: space-between;
+  }
+
   .contenu-footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
+    min-width: 600px;
   }
 
   .a-propos .nos-hebergements .assistance {
     justify-content: center;
-    
   }
 
   li {
-    font-size: 1.5em;
+    font-size: 1.125em;
   }
 
   .h1-formulaire h1 {
-    font-size: 1.875em ;
+    font-size: 1.875em;
   }
-.titre-bloc-hebergements h2, .titre-bloc-populaires h2, #contenu-bloc-activites h2 {
-  font-size: 1.5em;
+  .titre-bloc-hebergements h2,
+  .titre-bloc-populaires h2,
+  #contenu-bloc-activites h2 {
+    font-size: 1.5em;
+  }
+
+  .contenu-bloc-populaires h3,
+  .contenu-bloc-hebergements h3,
+  .bloc-toutes-activites h3,
+  .contenu-footer h3 {
+    font-size: 1.375em;
+  }
+
+  .contenu-bloc-populaires p,
+  .contenu-bloc-hebergements p,
+  .bloc-toutes-activites p, .contenu-footer li {
+    font-size: 1.375em;
+  }
 }
-
-  .contenu-bloc-populaires h3, .contenu-bloc-hebergements h3, .bloc-toutes-activites h3, .contenu-footer h3 {
-   font-size: 1.375em; 
-  }
-
-  .contenu-bloc-populaires p, .contenu-bloc-hebergements p, .bloc-toutes-activites p {
-   font-size: 0.9375em; 
-  }
-   
-}
-
