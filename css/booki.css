@@ -85,6 +85,7 @@ body {
   flex-flow: nowrap;
   justify-content: flex-end;
   list-style-type: none;
+  border: 3px solid transparent;
 }
 
 .navbar a {
@@ -257,7 +258,7 @@ input::placeholder {
 
 .contenu-bloc-hebergements {
   display: flex;
-  flex: 0 1 80%;
+  flex: 0 1 65%;
   flex-direction: column;
   padding: 0 20px 20px 20px;
   background-color: #f2f2f2;
@@ -337,7 +338,7 @@ input::placeholder {
 
 .contenu-bloc-populaires {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 25%;
   flex-direction: column;
   margin-right: 5px;
   margin-left: 15px;
@@ -558,22 +559,8 @@ footer li {
 /* Adaptation pour les appareils mobiles */
 /*media queries*/
 
-/*Large devices (desktops, 992px and up)*/
-@media screen and (min-width: 992px) {
-  #bloc-page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 /*Medium devices (tablets, less than 992px)*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .en-tete {
     padding: 35px 10px 10px 35px;
     flex-direction: row;
@@ -604,21 +591,7 @@ footer li {
   }
 
   .contenu-bloc-hebergements {
-    display: flex;
-    flex-direction: column;
-    
-  }
-
-  .contenu-bloc-populaires {
     order: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contenu-bloc-hebergements {
-    order: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -627,6 +600,13 @@ footer li {
 
   .card-bloc-hebergements {
     width: 100%;
+  }
+
+  .contenu-bloc-populaires {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   #contenu-bloc-activites {
@@ -640,9 +620,6 @@ footer li {
     flex-direction: column;
     justify-content: space-around;
   }
-  .bloc-toutes-activites img {
-    max-width: 100%;
-  }
 
   footer {
     display: flex;
@@ -653,9 +630,9 @@ footer li {
   }
 }
 
-/*Small devices (landscape phones, less than 575px)*/
+/*Small devices (landscape phones, less than 767px)*/
 
-@media screen and (max-width: 574.98px) {
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 1.625em; /*26px / 16px */
   }
@@ -753,16 +730,14 @@ footer li {
 
   #logements-region-marseille {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .contenu-bloc-populaires {
     order: 0;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 520px;
-    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .titre-bloc-populaires h2 {
@@ -770,17 +745,15 @@ footer li {
   }
 
   .card-bloc-populaires {
-    min-width: 320px;
-    height: 150px;
-    object-position: center;
-    object-fit: cover;
+    display: flex;
+    width: 80%;
+    height: 65%;
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
 
   .card-bloc-populaires img {
-    min-width: 200px;
-    height: 200px;
+    min-width: 100%;
     object-position: center;
     object-fit: cover;
     border-radius: 15px 0 0 15px;
@@ -794,27 +767,29 @@ footer li {
   .contenu-bloc-hebergements {
     order: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: white;
-    width: 100%;
   }
 
-  .card-bloc-hebergements,
-  figure {
+  .card-bloc-hebergements {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
 
   .card-bloc-hebergements img {
-    min-width: 320px;
-    height: 150px;
-    object-fit: cover;
+    min-width: 100%;
     object-position: center;
-    border-radius: 30px 30px 0 0;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
   }
 
   .afficher-plus p {
-    font-size: 1.75em;
+    font-size: 2em;
+    font-weight: bolder;
   }
 
   .card-bloc-populaires-etoiles span,
@@ -824,37 +799,34 @@ footer li {
 
   #contenu-bloc-activites {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .bloc-toutes-activites {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
+    align-items: center;
+  }
+
+  .colonne-grande-photo,
+  .colonne-petites-card-activites {
+    display: flex;
+    width: 80%;
   }
 
   .bloc-toutes-activites img {
-    min-width: 540px;
-    height: 220px;
+    min-width: 100%;
+    height: 250px;
     object-fit: cover;
     object-position: top;
     border-radius: 30px 30px 0 0;
   }
 
-  .petite-photo-activites-pomegues img {
+  .petite-photo-activites-pomegues img,
+  .petite-photo-activites-frioul img,
+  .petite-photo-activites-longchamp img {
     object-position: center;
-  }
-
-  .colonne-grande-photo,
-  .colonne-petites-card-activites {
-    justify-content: space-between;
-  
-    
-  }
-
-  figcaption {
-    width: 100%;
   }
 
   .contenu-footer {
