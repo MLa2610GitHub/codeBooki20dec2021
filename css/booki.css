@@ -105,9 +105,10 @@ body {
   flex-direction: column;
 }
 
-.h1-formulaire, .p-formulaire {
-    text-align: left;
-  }
+.h1-formulaire,
+.p-formulaire {
+  text-align: left;
+}
 
 .form {
   display: flex;
@@ -135,13 +136,14 @@ body {
   padding: 16px;
   border: none;
   margin-top: 0;
-  font-size: 20px;
+  font-size: 0.9375em;
+
   border: solid #f2f2f2;
 }
 
 input::placeholder {
   color: black;
-  font-weight: 550;
+  font-weight: 700;
 }
 
 .bouton-rechercher {
@@ -153,8 +155,8 @@ input::placeholder {
   border: none;
   margin-top: 0;
   margin-right: 16px;
-  font-size: 20px;
-
+  font-size: 0.9375em;
+  font-weight: 700;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #0065fc;
@@ -173,14 +175,14 @@ input::placeholder {
 
 .liste-filtres-recherche-hebergement {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  margin: 25px 25px 25px 10px;
 }
 
 .titre-filtres-recherche-hebergement {
   margin-right: 15px;
-  font-weight: bolder;
-  font-size: 18px;
+  font-size: 0.9375em;
+  font-weight: 900;
   padding-left: 5px;
   text-align: center;
 }
@@ -193,7 +195,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 38px;
+  height: 33px;
   border: 2px solid #deebff;
   border-radius: 50px;
   margin-right: 20px;
@@ -209,8 +211,8 @@ input::placeholder {
 
 .filtre-icone {
   display: flex;
-  height: 38px;
-  width: 38px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   font-size: 18px;
   color: #0065fc;
@@ -224,7 +226,7 @@ input::placeholder {
 
 .nombre-logements {
   display: flex;
-  flex-wrap: wrap;
+
   margin-left: 10px;
   margin-bottom: 20px;
 }
@@ -234,7 +236,7 @@ input::placeholder {
   justify-content: center;
   border-radius: 50%;
   padding: 10px;
-  margin-top: -5px;
+
   box-shadow: 2px 2px 2px grey rgb(0, 0, 1);
   border: solid 2px #f2f2f2;
   font-size: 12px;
@@ -245,7 +247,6 @@ input::placeholder {
   display: flex;
   justify-content: baseline;
   padding-left: 10px;
-  margin-top: -5px;
 }
 
 /*Marseille : les logements disponibles et les logements populaires*/
@@ -421,7 +422,6 @@ input::placeholder {
 
   align-items: flex-end;
   padding-left: 15px;
-  margin-top: 15px;
 }
 
 .card-bloc-populaires-etoiles .fa-star {
@@ -468,10 +468,7 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 0;
-  box-shadow: 
-0px 0px 3px var(--grey)
-  
-
+  box-shadow: 0px 0px 3px var(--grey);
 }
 
 figcaption {
@@ -480,7 +477,7 @@ figcaption {
   border-radius: 0 0 10px 10px;
   border: 1px #f2f2f2;
   box-shadow: -2px 4px 10px 0 #e0e0e0;
-  font-size: 16px;
+  font-size: 0.9375em;
   font-weight: bold;
   text-align: left;
 }
@@ -563,11 +560,6 @@ footer li {
 
 /*Large devices (desktops, 992px and up)*/
 @media screen and (min-width: 992px) {
-  body {
-    display: flex;
-    min-height: 100vh;
-  }
-
   #bloc-page {
     display: flex;
     flex-direction: column;
@@ -581,29 +573,9 @@ footer li {
 }
 
 /*Medium devices (tablets, less than 992px)*/
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    min-height: 100vh;
-  }
-
-  #bloc-page {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
+@media screen and (max-width: 768px) {
   .en-tete {
     padding: 35px 10px 10px 35px;
-
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -631,10 +603,10 @@ footer li {
     flex-wrap: wrap;
   }
 
-  #logements-region-marseille {
+  .contenu-bloc-hebergements {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    
   }
 
   .contenu-bloc-populaires {
@@ -659,13 +631,15 @@ footer li {
 
   #contenu-bloc-activites {
     display: flex;
+    flex-direction: column;
+    order: 2;
   }
 
   .bloc-toutes-activites {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
   }
-
   .bloc-toutes-activites img {
     max-width: 100%;
   }
@@ -681,10 +655,7 @@ footer li {
 
 /*Small devices (landscape phones, less than 575px)*/
 
-@media screen and (max-width: 767px) {
-
- 
-
+@media screen and (max-width: 574.98px) {
   h1 {
     font-size: 1.625em; /*26px / 16px */
   }
@@ -699,12 +670,6 @@ footer li {
 
   p {
     font-size: 1.125em; /*18px / 16px */
-  }
-
-  #body {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
   }
 
   #bloc-page {
@@ -731,8 +696,8 @@ footer li {
   }
 
   .navbar a {
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    width: 50%;
   }
 
   .navbar a:hover {
@@ -743,11 +708,17 @@ footer li {
   #recherche-hebergements {
     display: flex;
     flex-direction: column;
-    margin: auto;
   }
 
-  .h1-formulaire, .p-formulaire {
-    text-align: left;
+  .h1-formulaire,
+  .p-formulaire {
+    text-align: center;
+    width: 100%;
+  }
+
+  .form {
+    justify-content: center;
+    align-items: center;
   }
 
   .bouton-rechercher {
@@ -771,10 +742,18 @@ footer li {
     flex-wrap: wrap;
   }
 
+  .nombre-logements {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .icone-info {
+    margin-top: 10px;
+  }
+
   #logements-region-marseille {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
   }
 
   .contenu-bloc-populaires {
@@ -791,15 +770,15 @@ footer li {
   }
 
   .card-bloc-populaires {
-    min-width: 540px;
-    height: 200px;
+    min-width: 320px;
+    height: 150px;
     object-position: center;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
 
-   .card-bloc-populaires img {
+  .card-bloc-populaires img {
     min-width: 200px;
     height: 200px;
     object-position: center;
@@ -807,24 +786,28 @@ footer li {
     border-radius: 15px 0 0 15px;
   }
 
+  .card-bloc-populaires-etoiles .fas {
+    display: flex;
+    align-items: flex-end;
+  }
 
   .contenu-bloc-hebergements {
     order: 1;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-between;
     background-color: white;
     width: 100%;
   }
 
-  .card-bloc-hebergements, figure {
-     box-shadow: -2px 4px 10px 0 #e0e0e0;
+  .card-bloc-hebergements,
+  figure {
+    box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
 
   .card-bloc-hebergements img {
-    min-width: 540px;
-    height: 220px;
+    min-width: 320px;
+    height: 150px;
     object-fit: cover;
     object-position: center;
     border-radius: 30px 30px 0 0;
@@ -836,15 +819,18 @@ footer li {
 
   .card-bloc-populaires-etoiles span,
   .card-bloc-hebergements-etoiles span {
-    font-size: 1.5em;
+    font-size: 0.875em;
   }
 
- 
+  #contenu-bloc-activites {
+    display: flex;
+    flex-direction: column;
+  }
+
   .bloc-toutes-activites {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
   }
 
@@ -860,12 +846,15 @@ footer li {
     object-position: center;
   }
 
-  figcaption {
-    font-size: 1.75em;
+  .colonne-grande-photo,
+  .colonne-petites-card-activites {
+    justify-content: space-between;
+  
+    
   }
 
-  .colonne-grande-photo, .colonne-petites-card-activites {
-    justify-content: space-between;
+  figcaption {
+    width: 100%;
   }
 
   .contenu-footer {
@@ -896,13 +885,16 @@ footer li {
   .contenu-bloc-populaires h3,
   .contenu-bloc-hebergements h3,
   .bloc-toutes-activites h3,
+  figcaption,
   .contenu-footer h3 {
-    font-size: 1.375em;
+    font-size: 1.0625em;
+    /*17px/16px*/
   }
 
   .contenu-bloc-populaires p,
   .contenu-bloc-hebergements p,
-  .bloc-toutes-activites p, .contenu-footer li {
-    font-size: 1.375em;
+  .bloc-toutes-activites p,
+  .contenu-footer li {
+    font-size: 0.9375em;
   }
 }
