@@ -23,11 +23,11 @@ h2 {
 }
 
 h3 {
-  font-size: 0.9375em; /*15px / 16px */
+  font-size: 0.875em; /*14px / 16px */
 }
 
 p {
-  font-size: 0.875em; /*14px / 16px */
+  font-size: 0.8125em; /*13px / 16px */
 }
 
 /*Définition des couleurs de la charte*/
@@ -48,6 +48,7 @@ a {
 body {
   box-sizing: border-box;
   min-height: 100vh;
+
   font-family: Raleway, arial, sans-serif;
   color: black;
 }
@@ -55,12 +56,13 @@ body {
 /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
 #bloc-page {
   max-width: 1400px;
-  margin: auto;
+  margin: 0;
+  padding: 0 50px;
   display: flex;
   flex-direction: column;
 }
 
-/*Le header comprend un logo et une barre de navigation avec deux liens menant vers les sections hébergements et activités*/
+/*Le header (.en-tete) comprend un logo et une barre de navigation avec deux liens menant vers les sections hébergements et activités*/
 
 .en-tete {
   display: flex;
@@ -68,10 +70,9 @@ body {
 }
 
 .logo-booki {
-  padding-top: 20px;
-  padding-left: 10px;
+  padding: 20px;
   color: #0065fc;
-  object-fit: cover;
+ 
 }
 
 .logo-booki img {
@@ -82,20 +83,19 @@ body {
 
 .navbar {
   display: flex;
-  flex-flow: nowrap;
+
   justify-content: flex-end;
   list-style-type: none;
 }
 
-.navbar a {
-  display: list-item;
-  list-style: none;
-  margin-right: 50px;
-  padding-top: 50px;
+.navbar li {
+  
+  margin: 0 20px 0 20px;
+  padding: 20px;
   border: 3px solid transparent;
 }
 
-.navbar a:hover {
+.navbar li:hover {
   border-top: 3px solid #0065fc;
 }
 
@@ -113,38 +113,42 @@ body {
 
 .form {
   display: flex;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px 0 0 20px;
   background-color: none;
+  margin-bottom: 20px;
+   
+   
+  
 }
 
-.icone-map-form {
+.fa-map-marker-alt {
   display: flex;
   align-items: center;
   border-radius: 15px 0 0 15px;
-  padding: 18px 18px;
+  padding: 16px;
   background-color: #f2f2f2;
   font-weight: bold;
 }
 
 .champ-recherche {
   display: flex;
+  
+  
 }
 
 .form input[type="search"] {
   padding: 16px;
-  border: none;
+  border: 1px solid #f2f2f2;
   margin-top: 0;
-  font-size: 0.9375em;
+  font-size: 1.0625em;
 
-  border: solid #f2f2f2;
+ 
 }
 
 input::placeholder {
   color: black;
   font-weight: 700;
+  
 }
 
 .bouton-rechercher {
@@ -152,14 +156,14 @@ input::placeholder {
 }
 
 .form input[type="button"] {
-  padding: 0 15px;
+  padding: 0 16px;
   border: none;
-  margin-top: 0;
+  
   margin-right: 16px;
-  font-size: 0.9375em;
+  font-size: 1.0625em;
   font-weight: 700;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 0 20px 20px 0;
+  
   background-color: #0065fc;
   color: white;
 }
@@ -168,55 +172,45 @@ input::placeholder {
   display: none;
   align-items: center;
   padding: 16px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 0 20px 20px 0;
   color: white;
   background-color: #0065fc;
 }
 
 .liste-filtres-recherche-hebergement {
   display: flex;
-  justify-content: flex-start;
-}
-
-.titre-filtres-recherche-hebergement {
-  margin-right: 15px;
-  font-size: 0.9375em;
-  font-weight: 900;
-  padding-left: 5px;
-  text-align: center;
-}
-
-.items-filtre-hebergement {
-  display: flex;
+    justify-content: flex-start;
 }
 
 .filtre-hebergement {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 33px;
+  height: 45px;
   border: 2px solid #deebff;
+  
+  
   border-radius: 50px;
-  margin-right: 20px;
+  margin: 0 10px;
+
 }
 
+.titre-filtres-recherche-hebergement {
+  padding: 0 10px;
+  font-size: 1.0625em;
+  font-weight: 700;
+ 
+}
 .filtre-hebergement i {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: 5px solid #deebff;
-}
-
-.filtre-icone {
-  display: flex;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  font-size: 18px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
   color: #0065fc;
   background-color: #deebff;
+  
+  
 }
 
 .filtre-hebergement:hover {
@@ -229,15 +223,14 @@ input::placeholder {
 
   margin-left: 10px;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .nombre-logements i {
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100%;
   padding: 10px;
-
-  box-shadow: 2px 2px 2px grey rgb(0, 0, 1);
   border: solid 2px #f2f2f2;
   font-size: 12px;
   color: #0065fc;
@@ -264,16 +257,10 @@ input::placeholder {
   border-radius: 18px;
 }
 
-.titre-bloc-hebergements {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 18px;
-}
-
 .liste-hebergements {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card-bloc-hebergements {
@@ -445,7 +432,7 @@ input::placeholder {
 #contenu-bloc-activites {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
 }
 
 .bloc-toutes-activites {
@@ -529,7 +516,8 @@ figcaption {
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #f2f2f2;
-  padding-top: 20px;
+  padding: 40px;
+  margin: 0 -50px;
 }
 
 .a-propos,
@@ -539,7 +527,7 @@ figcaption {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-right: 150px;
+  width: 33%;
 }
 
 .a-propos h3,
@@ -640,23 +628,21 @@ footer li {
 
   #contenu-bloc-activites {
     display: flex;
-   
+
     padding: 20px;
   }
 
   .bloc-toutes-activites {
     display: flex;
     flex-direction: column;
-   
-    
-    
   }
 
   .colonne-petites-card-activites,
-  .colonne-grande-photo, .petite-photo-activites-pomegues, .activites-garde {
+  .colonne-grande-photo,
+  .petite-photo-activites-pomegues,
+  .activites-garde {
     display: flex;
-      margin-bottom: 20px;
-    
+    margin-bottom: 20px;
   }
 
   .bloc-toutes-activites img {
@@ -699,6 +685,11 @@ footer li {
 
   p {
     font-size: 1.125em; /*18px / 16px */
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
   #bloc-page {
