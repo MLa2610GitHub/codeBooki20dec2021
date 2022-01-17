@@ -34,11 +34,17 @@
         </div>
 
         <nav class="navbar">
-          <li>
-            <a href="#logements-region-marseille" class="lienH">Hébergements</a>
-          </li>
+          <ul class="nav-ul">
+            <li>
+              <a href="#logements-region-marseille" class="lienH"
+                >Hébergements</a
+              >
+            </li>
 
-          <li><a href="#contenu-bloc-activites" class="lienA">Activités</a></li>
+            <li>
+              <a href="#contenu-bloc-activites" class="lienA">Activités</a>
+            </li>
+          </ul>
         </nav>
       </header>
 
@@ -68,31 +74,30 @@
           </div>
 
           <div class="liste-filtres-recherche-hebergement">
-
             <div class="titre-filtres-recherche-hebergement">
               <h3>Filtres</h3>
-            </div>         
+            </div>
 
             <div class="filtre-hebergement">
-              <i class="fas fa-money-bill-wave fa-lg filtre-icone"></i>
+              <i class="fas fa-money-bill-wave filtre-icone"></i>
               <div class="titre-filtres-recherche-hebergement">
                 <h3>Economique</h3>
               </div>
-            </div>             
+            </div>
 
             <div class="filtre-hebergement">
               <i class="fas fa-child fa-lg filtre-icone"></i>
               <div class="titre-filtres-recherche-hebergement">
-                <h3>Familial</h3> 
+                <h3>Familial</h3>
               </div>
-            </div>             
+            </div>
 
             <div class="filtre-hebergement">
               <i class="fas fa-heart fa-lg filtre-icone"></i>
               <div class="titre-filtres-recherche-hebergement">
                 <h3>Romantique</h3>
               </div>
-            </div>              
+            </div>
 
             <div class="filtre-hebergement">
               <i class="fas fa-dog fa-lg filtre-icone"></i>
@@ -101,263 +106,43 @@
               </div>
             </div>
           </div>
-
-          <div class="nombre-logements">
-            <div class="icone-info">
-              <i class="fas fa-info"></i>
-            </div>
-
-            <div class="texte-logements">
-              <p>Plus de 500 logements sont disponibles dans cette ville</p>
-            </div>
-          </div>
         </section>
 
-        <section id="logements-region-marseille">
-          <!--Les hébergements disponibles à Marseille et les plus populaires-->
+        <p class="nombre-logements">
+          <i class="fas fa-info"></i>
 
-          <div class="contenu-bloc-hebergements">
-            <!--partie consacrée au bloc hébergements disponibles à Marseille-->
+          Plus de 500 logements sont disponibles dans cette ville
+        </p>
 
-            <h2>Hébergements à Marseille</h2>
+        <div class="integralite-logements">
+          <section id="logements-region-marseille">
+            <!--Les hébergements disponibles à Marseille-->
 
-            <div class="liste-hebergements">
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/auberge-la-cannebiere-small.jpg"
-                      alt="Auberge La Cannebiere"
-                    />
-                  </div>
+            <div class="contenu-bloc-hebergements">
+              <!--partie consacrée au bloc hébergements disponibles à Marseille-->
 
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Auberge La Cannebiere
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 25€
-                    </p>
-                  </div>
+              <h2>Hébergements à Marseille</h2>
 
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs grey"></span>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/hotel-du-port-small.jpg"
-                      alt="Hôtel du Port"
-                    />
-                  </div>
-
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Hôtel du Port
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 52€
-                    </p>
-                  </div>
-
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/hotel-les-mouettes-small.jpg"
-                      alt="Hôtel Les Mouettes"
-                    />
-                  </div>
-
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Hôtel Les Mouettes
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 70€
-                    </p>
-                  </div>
-
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs grey"></span>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/hotel-de-la-mer-small.jpg"
-                      alt="Hôtel de la mer"
-                    />
-                  </div>
-
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Hôtel de la mer
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 46€
-                    </p>
-                  </div>
-
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs grey"></span>
-                    <span class="fas fa-star fa-xs grey"></span>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/auberge-le-panier-small.jpg"
-                      alt="Auberge Le Panier"
-                    />
-                  </div>
-
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Auberge Le Panier
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 23€
-                    </p>
-                  </div>
-
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs"></span>
-                    <span class="fas fa-star fa-xs grey"></span>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-hebergements">
-                  <div class="photo-card-hebergements">
-                    <img
-                      src="images/hebergements/hotel-chez-amina-small.jpg"
-                      alt="Hôtel Chez Amina"
-                    />
-                  </div>
-
-                  <div class="data-card-bloc-hebergements">
-                    <h3 class="card-bloc-hebergements-nom-hotel">
-                      Hôtel chez Amina
-                    </h3>
-                    <p class="card-bloc-hebergements-prix">
-                      Nuit à partir de 96€
-                    </p>
-                  </div>
-
-                  <div class="card-bloc-hebergements-etoiles">
-                    <span class="fa fa-star fa-xs"></span>
-                    <span class="fa fa-star fa-xs"></span>
-                    <span class="fa fa-star fa-xs"></span>
-                    <span class="fa fa-star fa-xs"></span>
-                    <span class="fa fa-star fa-xs"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="afficher-plus">
-              <p><a href="#">Afficher plus</a></p>
-            </div>
-          </div>
-
-          <div class="contenu-bloc-populaires">
-            <!--Partie consacrée aux hébergements les plus populaires à Marseille-->
-
-            <div class="header-bloc-populaires">
-              <div class="titre-bloc-populaires">
-                <h2>Les plus populaires</h2>
-              </div>
-
-              <div>
-                <i class="fas fa-chart-line fa-lg"></i>
-              </div>
-            </div>
-
-            <div class="liste-hebergements-populaires">
-              <a href="#">
-                <div class="card-bloc-populaires">
-                  <div class="photo-card-bloc-populaires">
-                    <img
-                      src="images/hebergements/hotel-le-soleil-du-matin-small.jpg"
-                      alt="Hôtel Le soleil du matin"
-                    />
-                  </div>
-
-                  <div class="data-bloc-populaires">
-                    <div class="nom-hotel-bloc-populaires">
-                      <h3>Hôtel Le soleil du matin</h3>
+              <div class="liste-hebergements">
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/auberge-la-cannebiere-small.jpg"
+                        alt="Auberge La Cannebiere"
+                      />
                     </div>
 
-                    <div class="prix-bloc-populaires">
-                      <p>Nuit à partir de 128€</p>
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Auberge La Cannebiere
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 25 <span class="euro">€</span>
+                      </p>
                     </div>
 
-                    <div class="card-bloc-populaires-etoiles">
-                      <span class="fas fa-star fa-xs"></span>
-                      <span class="fas fa-star fa-xs"></span>
-                      <span class="fas fa-star fa-xs"></span>
-                      <span class="fas fa-star fa-xs"></span>
-                      <span class="fas fa-star fa-xs"></span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="card-bloc-populaires">
-                  <div class="photo-card-bloc-populaires">
-                    <img
-                      src="images/hebergements/au-coeur-de-l-eau-small.jpg"
-                      alt="Au coeur de l'eau Chambres d'hôtes"
-                    />
-                  </div>
-
-                  <div class="data-bloc-populaires">
-                    <div class="nom-hotel-bloc-populaires">
-                      <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                    </div>
-
-                    <div class="prix-bloc-populaires">
-                      <p>Nuit à partir de 71€</p>
-                    </div>
-
-                    <div class="card-bloc-populaires-etoiles">
+                    <div class="card-bloc-hebergements-etoiles">
                       <span class="fas fa-star fa-xs"></span>
                       <span class="fas fa-star fa-xs"></span>
                       <span class="fas fa-star fa-xs"></span>
@@ -365,28 +150,55 @@
                       <span class="fas fa-star fa-xs grey"></span>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
 
-              <a href="#">
-                <div class="card-bloc-populaires">
-                  <div class="photo-card-bloc-populaires">
-                    <img
-                      src="images/hebergements/hotel-tout-bleu-et-blanc-small.jpg"
-                      alt="Hôtel Tout Bleu et Blanc"
-                    />
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/hotel-du-port-small.jpg"
+                        alt="Hôtel du Port"
+                      />
+                    </div>
+
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Hôtel du Port
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 52 <span class="euro">€</span>
+                      </p>
+                    </div>
+
+                    <div class="card-bloc-hebergements-etoiles">
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                    </div>
                   </div>
+                </a>
 
-                  <div class="data-bloc-populaires">
-                    <div class="nom-hotel-bloc-populaires">
-                      <h3>Hôtel Tout Bleu et Blanc</h3>
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/hotel-les-mouettes-small.jpg"
+                        alt="Hôtel Les Mouettes"
+                      />
                     </div>
 
-                    <div class="prix-bloc-populaires">
-                      <p>Nuit à partir de 68€</p>
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Hôtel Les Mouettes
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 70 <span class="euro">€</span>
+                      </p>
                     </div>
 
-                    <div class="card-bloc-populaires-etoiles">
+                    <div class="card-bloc-hebergements-etoiles">
                       <span class="fas fa-star fa-xs"></span>
                       <span class="fas fa-star fa-xs"></span>
                       <span class="fas fa-star fa-xs"></span>
@@ -394,11 +206,206 @@
                       <span class="fas fa-star fa-xs grey"></span>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/hotel-de-la-mer-small.jpg"
+                        alt="Hôtel de la mer"
+                      />
+                    </div>
+
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Hôtel de la mer
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 46 <span class="euro">€</span>
+                      </p>
+                    </div>
+
+                    <div class="card-bloc-hebergements-etoiles">
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs grey"></span>
+                      <span class="fas fa-star fa-xs grey"></span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/auberge-le-panier-small.jpg"
+                        alt="Auberge Le Panier"
+                      />
+                    </div>
+
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Auberge Le Panier
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 23 <span class="euro">€</span>
+                      </p>
+                    </div>
+
+                    <div class="card-bloc-hebergements-etoiles">
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs"></span>
+                      <span class="fas fa-star fa-xs grey"></span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="card-bloc-hebergements">
+                    <div class="photo-card-hebergements">
+                      <img
+                        src="images/hebergements/hotel-chez-amina-small.jpg"
+                        alt="Hôtel Chez Amina"
+                      />
+                    </div>
+
+                    <div class="data-card-bloc-hebergements">
+                      <h3 class="card-bloc-hebergements-nom-hotel">
+                        Hôtel chez Amina
+                      </h3>
+                      <p class="card-bloc-hebergements-prix">
+                        Nuit à partir de 96 <span class="euro">€</span>
+                      </p>
+                    </div>
+
+                    <div class="card-bloc-hebergements-etoiles">
+                      <span class="fa fa-star fa-xs"></span>
+                      <span class="fa fa-star fa-xs"></span>
+                      <span class="fa fa-star fa-xs"></span>
+                      <span class="fa fa-star fa-xs"></span>
+                      <span class="fa fa-star fa-xs"></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="afficher-plus">
+                <p><a href="#">Afficher plus</a></p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          <section id="logements-populaires-marseille">
+            <!--Les hébergements les plus populaires à Marseille-->
+
+            <div class="contenu-bloc-populaires">
+              <!--Partie consacrée aux hébergements les plus populaires à Marseille-->
+
+              <div class="header-bloc-populaires">
+                <div class="titre-bloc-populaires">
+                  <h2>Les plus populaires</h2>
+                </div>
+
+                <div>
+                  <i class="fas fa-chart-line fa-lg"></i>
+                </div>
+              </div>
+
+              <div class="liste-hebergements-populaires">
+                <a href="#">
+                  <div class="card-bloc-populaires">
+                    <div class="photo-card-bloc-populaires">
+                      <img
+                        src="images/hebergements/hotel-le-soleil-du-matin-small.jpg"
+                        alt="Hôtel Le soleil du matin"
+                      />
+                    </div>
+
+                    <div class="data-bloc-populaires">
+                      <div class="nom-hotel-bloc-populaires">
+                        <h3>Hôtel Le soleil du matin</h3>
+                      </div>
+
+                      <div class="prix-bloc-populaires">
+                        <p>Nuit à partir de 128 <span class="euro">€</span></p>
+                      </div>
+
+                      <div class="card-bloc-populaires-etoiles">
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="card-bloc-populaires">
+                    <div class="photo-card-bloc-populaires">
+                      <img
+                        src="images/hebergements/au-coeur-de-l-eau-small.jpg"
+                        alt="Au coeur de l'eau Chambres d'hôtes"
+                      />
+                    </div>
+
+                    <div class="data-bloc-populaires">
+                      <div class="nom-hotel-bloc-populaires">
+                        <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                      </div>
+
+                      <div class="prix-bloc-populaires">
+                        <p>Nuit à partir de 71 <span class="euro">€</span></p>
+                      </div>
+
+                      <div class="card-bloc-populaires-etoiles">
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs grey"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="card-bloc-populaires">
+                    <div class="photo-card-bloc-populaires">
+                      <img
+                        src="images/hebergements/hotel-tout-bleu-et-blanc-small.jpg"
+                        alt="Hôtel Tout Bleu et Blanc"
+                      />
+                    </div>
+
+                    <div class="data-bloc-populaires">
+                      <div class="nom-hotel-bloc-populaires">
+                        <h3>Hôtel Tout Bleu et Blanc</h3>
+                      </div>
+
+                      <div class="prix-bloc-populaires">
+                        <p>Nuit à partir de 68 <span class="euro">€</span></p>
+                      </div>
+
+                      <div class="card-bloc-populaires-etoiles">
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs"></span>
+                        <span class="fas fa-star fa-xs grey"></span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
 
         <h2 class="titre-activites">Activités à Marseille</h2>
 

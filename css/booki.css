@@ -48,18 +48,14 @@ a {
 body {
   box-sizing: border-box;
   min-height: 100vh;
-
   font-family: Raleway, arial, sans-serif;
   color: black;
 }
 
 /*La div principale de la page est transformée en container flex et ses éléments sont centrés*/
 #bloc-page {
-  max-width: 1400px;
-  margin: 0;
-  padding: 0 50px;
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*Le header (.en-tete) comprend un logo et une barre de navigation avec deux liens menant vers les sections hébergements et activités*/
@@ -68,6 +64,8 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+/*Le logo a été passé au format svg pour ne pas être pixelisé*/
 
 .logo-booki {
   padding: 20px;
@@ -80,14 +78,16 @@ body {
 
 /*Navigation*/
 
-.navbar {
+.navbar ul {
   display: flex;
-
   justify-content: flex-end;
   list-style-type: none;
+  margin: 0;
 }
 
 .navbar li {
+  display: flex;
+
   margin: 0 20px 0 20px;
   padding: 20px;
   border: 3px solid transparent;
@@ -95,6 +95,10 @@ body {
 
 .navbar li:hover {
   border-top: 3px solid #0065fc;
+}
+
+.navbar li:hover a {
+  color: #0065fc;
 }
 
 /*Formulaire de recherche d'hébergement*/
@@ -206,60 +210,73 @@ input::placeholder {
 
 .nombre-logements {
   display: flex;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  align-items: center;
 }
 
 .nombre-logements i {
-  align-items: center;
+  display: flex;
   justify-content: center;
-  border-radius: 100%;
-  padding: 10px;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   border: solid 2px #f2f2f2;
-  font-size: 12px;
+  font-size: 10px;
   color: #0065fc;
 }
 
-.texte-logements {
-  display: flex;
+.nombre-logements p {
   justify-content: baseline;
-  padding-left: 10px;
 }
 
 /*Marseille : les logements disponibles et les logements populaires*/
 
+.integralite-logements {
+  display: flex;
+  justify-content: space-between;
+}
+
 #logements-region-marseille {
   display: flex;
+  width: 69%;
 }
 
 .contenu-bloc-hebergements {
   display: flex;
-  flex: 0 1 65%;
-  flex-direction: column;
-  padding: 0 20px 20px 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding: 0 10px 10px 10px;
   background-color: #f2f2f2;
   border-radius: 18px;
 }
 
+.contenu-bloc-hebergements h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
 .liste-hebergements {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
 }
 
+.card-bloc-hebergements a {
+  flex-basis: 23%;
+  margin-bottom: 25px;
+}
 .card-bloc-hebergements {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  margin-bottom: 25px;
   background-color: white;
   border-radius: 20px;
-  padding: 5px 5px 10px 5px;
+  padding: 5px;
 }
 
 .photo-card-hebergements img {
-  height: 130px;
+  height: 100px;
   width: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
@@ -271,7 +288,8 @@ input::placeholder {
   flex-direction: column;
   justify-content: flex-start;
   padding-left: 5px;
-  width: 260px;
+  width: 200px;
+  height: auto;
 }
 
 .card-bloc-hebergements-nom-hotel {
@@ -285,6 +303,10 @@ input::placeholder {
 .card-bloc-hebergements-prix {
   display: flex;
   align-content: flex-start;
+}
+
+.card-bloc-hebergements-prix .euro {
+  font-weight: bold;
 }
 
 .card-bloc-hebergements-etoiles {
@@ -302,21 +324,25 @@ input::placeholder {
 
 .afficher-plus p {
   padding: 20px;
+  margin: 0;
   font-size: 0.9375em;
   font-weight: bold;
 }
 
 /*Section logements les plus populaires*/
 
+#logements-populaires-marseille {
+  display: flex;
+  width: 30%;
+}
+
 .contenu-bloc-populaires {
   display: flex;
-  flex: 1 1 25%;
   flex-direction: column;
-  margin-right: 5px;
-  margin-left: 15px;
-  padding: 0 30px 20px 30px;
+
+  padding: 0 10px 10px 10px;
   background-color: #f2f2f2;
-  border-radius: 15px;
+  border-radius: 18px;
 }
 
 .header-bloc-populaires {
@@ -338,8 +364,8 @@ input::placeholder {
 .liste-hebergements-populaires {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-top: 10px;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .card-bloc-populaires a {
@@ -349,9 +375,9 @@ input::placeholder {
 .card-bloc-populaires {
   display: flex;
   align-items: flex-start;
-  flex: 1;
+
   margin-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-color: white;
   box-shadow: -2px 4px 10px 0 #e0e0e0;
   border-radius: 20px;
@@ -363,8 +389,8 @@ input::placeholder {
 }
 
 .photo-card-bloc-populaires img {
-  height: 130px;
-  width: 160px;
+  height: 120px;
+  width: 130px;
   object-fit: cover;
   border-radius: 15px 0 0 15px;
 }
@@ -390,6 +416,10 @@ input::placeholder {
 
 .prix-bloc-populaires p {
   margin-top: 0;
+}
+
+.prix-bloc-populaires .euro {
+  font-weight: bold;
 }
 
 .card-bloc-populaires-etoiles {
@@ -499,8 +529,6 @@ figcaption {
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #f2f2f2;
-  padding: 40px;
-  margin: 0 -50px;
 }
 
 .a-propos,
@@ -513,15 +541,9 @@ figcaption {
   width: 33%;
 }
 
-.a-propos h3,
-.nos-hebergements h3,
-.assistance h3 {
-  text-align: left;
-  padding-left: 40px;
-}
-
 footer ul {
   margin-top: 0;
+  padding-left: 0;
 }
 
 footer li {
@@ -537,9 +559,8 @@ footer li {
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #bloc-page {
     width: 70%;
+    flex-direction: column;
   }
-
- 
 
   #recherche-hebergements {
     padding: 20px;
@@ -558,50 +579,44 @@ footer li {
     margin-bottom: 10px;
   }
 
-  #logements-region-marseille {
+  .integralite-logements, #ogements-region-marseille, 
+  .contenu-bloc-hebergements {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    align-content: space-between;
+    
   }
 
   .contenu-bloc-hebergements {
-    order: 0;
-    display: flex;
-   
- 
+    order: 1;
   }
 
-  .card-bloc-hebergements{
+  .card-bloc-hebergements {
     display: flex;
-     width: 100%;
-   
+    width: 100%;
+  }
+
+  .liste-hebergements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .liste-hebergements a {
-     width: 100%;
-   
+    width: 100%;
   }
 
-   .photo-card-hebergements img {
+  .photo-card-hebergements img {
     object-fit: cover;
     object-position: center;
-   height: 200px;
-   
-   
-  }
-
- .card-bloc-populaires img {
- 
-   height: 180px;
-   
-   
+    height: 200px;
   }
 
   .contenu-bloc-populaires {
-    order: 1;
-    display: flex;
-   
+    order: 2;
+
+    width: 100%;
     flex-direction: column;
     padding-left: 20px;
     margin-bottom: 20px;
@@ -609,7 +624,20 @@ footer li {
     background-color: rgb(255, 255, 255);
   }
 
+  .card-bloc-populaires {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
 
+    border-radius: 15px;
+    box-shadow: -2px 4px 10px 0 #e0e0e0;
+  }
+
+  .card-bloc-populaires img {
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+  }
 
   .titre-activites {
     padding-left: 30px;
@@ -653,37 +681,19 @@ footer li {
     flex-wrap: wrap;
     align-items: flex-start;
     border-radius: 18px;
-     background-color: white;
-    
+    background-color: white;
   }
 
   .a-propos,
   .nos-hebergements,
   .assistance {
     width: auto;
-   
   }
 }
 
 /*Small devices (landscape phones, less than 767px)*/
 
 @media screen and (max-width: 767px) {
-  h1 {
-    font-size: 1.625em; /*26px / 16px */
-  }
-
-  h2 {
-    font-size: 1.375em; /*22px / 16px */
-  }
-
-  h3 {
-    font-size: 1.125em; /*18px / 16px */
-  }
-
-  p {
-    font-size: 1em; /*16px / 16px */
-  }
-
   body {
     min-height: 100vh;
     overflow-x: hidden;
@@ -701,7 +711,6 @@ footer li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
   }
 
   .logo-booki {
@@ -714,13 +723,6 @@ footer li {
     display: flex;
     justify-content: space-between;
     order: -1;
-    
-  }
-
-
-  .navbar {
-    margin: 0 20px;
-    padding: 0;
   }
 
   .navbar li:hover {
@@ -732,7 +734,10 @@ footer li {
     width: 50%;
   }
 
-  
+  .form input {
+    width: 60%;
+  }
+
   .bouton-rechercher {
     display: none;
   }
@@ -754,21 +759,22 @@ footer li {
     margin: 10px;
   }
 
-     #logements-region-marseille {
-    display: flex;
-    flex-wrap: wrap;
-  }
  
+
+  .integralite-logements,
+  .contenu-bloc-hebergements {
+    display: flex;
+    flex-direction: column;
+  }
 
   .contenu-bloc-populaires {
     order: 0;
     display: flex;
     flex: 1;
-    
   }
 
   .titre-bloc-populaires h2 {
-    font-size: 1.625em;
+    font-size: 1.125em;
   }
 
   .card-bloc-populaires {
@@ -794,13 +800,16 @@ footer li {
   .contenu-bloc-hebergements {
     order: 1;
     display: flex;
-   
-     background-color: white;
+
+    background-color: white;
   }
 
-   .liste-hebergements a {
-     width: 100%;
-   
+  .contenu-bloc-hebergements h2 {
+    font-size: 1.125em;
+  }
+
+  .liste-hebergements a {
+    width: 100%;
   }
   .card-bloc-hebergements {
     display: flex;
@@ -811,22 +820,23 @@ footer li {
   }
 
   .card-bloc-hebergements img {
-   height: 120px;
-   width: 100%;
+    height: 120px;
+    width: 100%;
     object-position: center;
     object-fit: cover;
-    border-radius: 15px 15px 0 0 ;
+    border-radius: 15px 15px 0 0;
   }
 
   .afficher-plus p {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bolder;
   }
 
-  .card-bloc-populaires-etoiles span,
+   .card-bloc-populaires-etoiles span,
   .card-bloc-hebergements-etoiles span {
-    font-size: 0.875em;
+    font-size: 0.625em;
   }
+
 
   .titre-activites {
     padding-left: 20px;
@@ -837,27 +847,24 @@ footer li {
 
   .bloc-toutes-activites {
     display: flex;
-  
+
     flex-direction: column;
-    
   }
 
   figure a {
-     width: 100%;
-   
+    width: 100%;
   }
 
   figure {
     display: flex;
-    
-     width: 100%;
+
+    width: 100%;
     margin: 10px;
   }
 
   .bloc-toutes-activites img {
-  
     width: 100%;
-     height: 150px;
+    height: 150px;
     object-fit: cover;
     object-position: top;
     border-radius: 30px 30px 0 0;
@@ -874,45 +881,26 @@ footer li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-      
   }
 
-   .a-propos,
+  .a-propos,
   .nos-hebergements,
   .assistance {
     width: auto;
-   
-  }
-  
-  li {
-    font-size: 1.125em;
   }
 
-  .h1-formulaire h1 {
-    font-size: 1.875em;
-  }
-  .titre-bloc-hebergements h2,
-  .titre-bloc-populaires h2,
-  .titre-activites {
-    font-size: 1.5em;
-    text-align: left;
+  h1 {
+    font-size: 1.375em; /*22px / 16px */
   }
 
-  .contenu-bloc-populaires h3,
-  .contenu-bloc-hebergements h3,
-  .bloc-toutes-activites h3,
-  figcaption,
-  .contenu-footer h3 {    
-    font-size: 1.0625em;
-    
-    
+  h2 {
+    font-size: 1.1875em; /*19px / 16px */
+  }
+  h3 {
+    font-size: 0.875em; /*14px / 16px */
   }
 
-  .contenu-bloc-populaires p,
-  .contenu-bloc-hebergements p,
-  .bloc-toutes-activites p,
-  .contenu-footer li {
-    font-size: 0.9375em;
+  p {
+    font-size: 0.75em; /*13px / 16px */
   }
-  /*17px/16px*/
 }
