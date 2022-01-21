@@ -30,6 +30,10 @@ p {
   font-size: 0.75em; /*12px / 16px */
 }
 
+.filtre-hebergement .fas {
+  font-size: 1.0625em; /*17px / 16px */
+}
+
 .fas {
   font-size: 0.65em;
 }
@@ -86,24 +90,24 @@ body {
 
 /*Navigation*/
 
-.navbar ul {
+.nav-ul {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
   margin: 0;
 }
 
-.navbar li {
+.nav-ul li {
   display: flex;
   padding: 20px;
   border: 3px solid transparent;
 }
 
-.navbar li:hover {
+.nav-ul li:hover {
   border-top: 3px solid #0065fc;
 }
 
-.navbar li:hover a {
+.nav-ul li:hover a {
   color: #0065fc;
 }
 
@@ -126,7 +130,6 @@ main {
 
 .form {
   display: flex;
-  border-radius: 15px;
   width: auto;
   margin-bottom: 20px;
 }
@@ -134,11 +137,9 @@ main {
 .fa-map-marker-alt {
   align-items: center;
   justify-content: center;
-  height: 26px;
   border-radius: 15px 0 0 15px;
-  padding: 14px;
+  padding: 15px;
   background-color: #f2f2f2;
-  font-weight: bold;
   font-size: 1em;
 }
 
@@ -149,8 +150,6 @@ main {
 .form input[type="text"] {
   padding: 0 10px;
   border: 1px solid #f2f2f2;
-  margin-top: 0;
-  font-size: 1.0625em;
 }
 
 input::placeholder {
@@ -159,14 +158,10 @@ input::placeholder {
 }
 
 button {
-  padding: 0 10px;
   border: none;
-
-  margin-right: 14px;
-  font-size: 1.0625em;
   font-weight: 700;
-  border-radius: 0 20px 20px 0;
-
+  border-radius: 0 15px 15px 0;
+  padding: 15px;
   background-color: #0065fc;
   color: white;
   cursor: pointer;
@@ -174,11 +169,6 @@ button {
 
 button .fas {
   display: none;
-  align-items: center;
-  padding: 14px;
-  border-radius: 0 20px 20px 0;
-  color: white;
-  background-color: #0065fc;
 }
 
 .liste-filtres-recherche-hebergement {
@@ -728,44 +718,55 @@ footer li {
   #bloc-page {
     display: flex;
     flex-direction: column;
-    width: auto;
   }
 
   .en-tete {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
   }
 
   .logo-booki {
-    order: -2;
-    text-align: center;
     margin: auto;
+    text-align: center;
   }
 
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    order: -1;
+  .nav-ul {
+    border-bottom: 1px solid #f2f2f2;
   }
 
-  .navbar li:hover {
+  .nav-ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .lienH {
+    margin-right: 20px;
+  }
+
+  .lienA {
+    margin-left: 50px;
+  }
+
+  .nav-ul li:hover {
     border-top: none;
     border-bottom: 3px solid #0065fc;
-    margin: 0;
-
     width: 50%;
   }
 
-  .h1-formulaire,
-  .p-formulaire,
+  .h1-formulaire {
+    width: 90%;
+  }
+
+  .p-formulaire {
+    margin-bottom: 30px;
+  }
+
   .form {
-    padding-left: 20px;
+    height: 45%;
   }
 
   .form input {
-    width: 60%;
+    width: 45%;
   }
 
   input::placeholder {
@@ -777,20 +778,21 @@ footer li {
     display: none;
   }
 
+  button {
+    border-radius: 15px;
+    margin-left: -7px;
+  }
+
   button .fas {
     display: flex;
-    border-radius: 10px;
     background-color: #0065fc;
     color: white;
+    font-size: 0.9375em;
   }
 
   .liste-filtres-recherche-hebergement {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  a .titre-filtres-recherche-hebergement {
-    width: 30%;
   }
 
   .titre-filtres-recherche-hebergement {
@@ -805,18 +807,26 @@ footer li {
     font-size: 0.8125em; /*13px / 16px */
   }
 
+  a .titre-filtres-recherche-hebergement {
+    width: 70%;
+  }
+
   .filtre-hebergement {
-    height: 30px;
+    height: 35px;
     margin-bottom: 5%;
   }
 
   .filtre-hebergement i {
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    margin-left: -2px;
+    border-radius: 50%;
   }
 
   .nombre-logements {
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
   }
 
   .integralite-logements {
@@ -839,7 +849,6 @@ footer li {
   .card-bloc-populaires {
     display: flex;
     width: 100%;
-
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
@@ -882,9 +891,7 @@ footer li {
     display: flex;
     flex-direction: column;
     width: 100%;
-
     margin-bottom: 10px;
-
     border-radius: 15px 0;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
@@ -893,7 +900,6 @@ footer li {
     height: 120px;
     width: 100%;
     max-width: 290px;
-
     object-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
@@ -913,7 +919,6 @@ footer li {
 
   .bloc-toutes-activites {
     display: flex;
-
     flex-direction: column;
   }
 
@@ -923,7 +928,6 @@ footer li {
 
   figure {
     display: flex;
-
     width: 90%;
     margin: 10px;
   }
@@ -956,11 +960,11 @@ footer li {
   }
 
   h1 {
-    font-size: 1.25em; /*20px / 16px */
+    font-size: 1.1875em; /*19px / 16px */
   }
 
   h2 {
-    font-size: 1.1875em; /*19px / 16px */
+    font-size: 1.125em; /*18px / 16px */
   }
   h3 {
     font-size: 0.875em; /*14px / 16px */
@@ -969,7 +973,8 @@ footer li {
   p {
     font-size: 0.75em; /*12px / 16px */
   }
-  .filtre-hebergement.fas {
-    font-size: 0.5em;
+
+  .filtre-hebergement .fas {
+    font-size: 0.9375em; /*15px / 16px */
   }
 }
