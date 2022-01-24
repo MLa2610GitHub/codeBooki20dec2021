@@ -113,7 +113,7 @@ body {
 
 /*padding left de 20px sur le main */
 main {
-  padding: 0 20px;
+  padding: 0;
 }
 
 /*Formulaire de recherche d'hébergement*/
@@ -121,17 +121,20 @@ main {
 #recherche-hebergement {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .h1-formulaire,
 .p-formulaire {
   text-align: left;
+  padding: 0 20px;
 }
 
 .form {
   display: flex;
   width: auto;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .fa-map-marker-alt {
@@ -182,6 +185,7 @@ button .fas {
   font-size: 1.0625em;
   font-weight: 700;
 }
+
 .filtre-hebergement {
   display: flex;
   align-items: center;
@@ -216,6 +220,7 @@ button .fas {
 .nombre-logements {
   display: flex;
   align-items: center;
+  padding: 0 20px;
 }
 
 .nombre-logements i {
@@ -240,6 +245,7 @@ button .fas {
 .integralite-logements {
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 #logements-region-marseille {
@@ -440,15 +446,21 @@ button .fas {
 
 /*Section Activités à Marseille*/
 
+.titre-activites {
+  padding: 0 20px;
+}
+
 .titre-activites h2 {
   margin-left: 10px;
   padding-top: 30px;
+  padding: 0 20px;
 }
 
 #contenu-bloc-activites {
   display: flex;
   flex-direction: column;
   margin-bottom: 55px;
+  padding: 0 20px;
 }
 
 .bloc-toutes-activites {
@@ -723,7 +735,7 @@ footer li {
   #bloc-page {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    width: auto;
   }
 
   .en-tete {
@@ -740,27 +752,29 @@ footer li {
     width: 45%;
   }
 
+  nav {
+    width: 100%;
+  }
+
   .nav-ul {
     border-bottom: 1px solid #f2f2f2;
+    padding-left: 0;
   }
 
   .nav-ul li {
     padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .lienH {
-    margin-right: 20px;
-  }
-
-  .lienA {
-    margin-left: 50px;
+    padding-left: 30px;
+    width: 50%;
   }
 
   .nav-ul li:hover {
     border-top: none;
     border-bottom: 3px solid #0065fc;
     width: 50%;
+  }
+
+  #recherche-hebergements {
+    padding: 0 20px;
   }
 
   .h1-formulaire {
@@ -777,7 +791,7 @@ footer li {
   }
 
   .form input {
-    width: 50%;
+    width: 60%;
   }
 
   input::placeholder {
@@ -836,7 +850,7 @@ footer li {
   }
 
   .nombre-logements {
-    padding-left: 10px;
+    padding-left: 20px;
     padding-bottom: 20px;
     font-size: 0.8125em; /*13px / 16px */
     width: 83%;
@@ -851,6 +865,13 @@ footer li {
   .integralite-logements {
     display: flex;
     flex-direction: column-reverse;
+    padding: 0;
+    width: auto;
+  }
+
+  #logements-region-marseille {
+    width: 100%;
+    padding: 0;
   }
 
   #logements-populaires-marseille {
@@ -860,9 +881,9 @@ footer li {
   .contenu-bloc-populaires {
     display: flex;
     border-radius: 0;
-    padding: 0;
     margin: 0;
-    width: 100%;
+    padding-left: 20px;
+    width: 92%;
   }
 
   .titre-bloc-populaires h2 {
@@ -870,13 +891,13 @@ footer li {
   }
 
   .liste-hebergements-populaires {
-    padding-top: 0;
+    padding: 0;
   }
 
   .card-bloc-populaires {
     display: flex;
     width: 92%;
-    max-width: 328px;
+    max-width: 320px;
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
@@ -889,8 +910,11 @@ footer li {
     border-radius: 15px 0 0 15px;
   }
 
+  .data-bloc-populaires {
+    padding-left: 4px;
+  }
   .card-bloc-populaires-etoiles {
-    padding-top: 25px;
+    padding-top: 38px;
   }
 
   .card-bloc-populaires-etoiles span,
@@ -906,12 +930,13 @@ footer li {
   .liste-hebergements {
     display: flex;
     background-color: white;
+    padding: 0 10px;
   }
 
   .contenu-bloc-hebergements h2 {
     font-size: 1.125em;
-    padding-bottom: 20px;
-    padding-top: 25px;
+
+    padding: 25px 0 20px 10px;
   }
 
   .liste-hebergements a {
@@ -936,13 +961,17 @@ footer li {
     border-radius: 15px 15px 0 0;
   }
 
+  .card-bloc-hebergements-etoiles {
+    padding-bottom: 4px;
+  }
+
   .afficher-plus p {
     font-size: 1em;
     font-weight: bolder;
   }
 
   .titre-activites {
-    padding-left: 20px;
+    padding-left: 26px;
   }
   #contenu-bloc-activites {
     display: flex;
