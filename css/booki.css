@@ -595,8 +595,12 @@ footer li {
     order: 1;
     width: 100%;
     padding: 10px 0;
+    background-color: rgb(255, 255, 255);
   }
 
+  .contenu-bloc-hebergements h2 {
+    padding: 20px;
+  }
   .liste-hebergements {
     display: flex;
     flex-direction: column;
@@ -630,20 +634,18 @@ footer li {
 
   .contenu-bloc-populaires {
     order: 2;
-
     width: 100%;
     flex-direction: column;
     padding-left: 20px;
     margin-bottom: 20px;
     margin-left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #f2f2f2;
   }
 
   .card-bloc-populaires {
     display: flex;
     align-items: stretch;
     width: 100%;
-
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
@@ -652,6 +654,10 @@ footer li {
     height: 140px;
     object-fit: cover;
     object-position: center;
+  }
+
+  .afficher-plus p {
+    margin-bottom: 10px;
   }
 
   .titre-activites {
@@ -712,12 +718,12 @@ footer li {
   body {
     min-height: 100vh;
     overflow-x: hidden;
-    width: 90%;
   }
 
   #bloc-page {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
   }
 
   .en-tete {
@@ -728,6 +734,10 @@ footer li {
   .logo-booki {
     margin: auto;
     text-align: center;
+  }
+
+  .logo-booki img {
+    width: 45%;
   }
 
   .nav-ul {
@@ -754,19 +764,20 @@ footer li {
   }
 
   .h1-formulaire {
-    width: 90%;
+    width: 82%;
   }
 
   .p-formulaire {
     margin-bottom: 30px;
+    font-size: 0.8125em; /*13px / 16px */
   }
 
   .form {
-    height: 45%;
+    height: 50%;
   }
 
   .form input {
-    width: 45%;
+    width: 50%;
   }
 
   input::placeholder {
@@ -800,7 +811,7 @@ footer li {
   }
 
   .titre-filtres-recherche-hebergement h2 {
-    font-size: 1em; /*16px / 16px */
+    font-size: 0.9375em; /*15px / 16px */
   }
 
   .filtre-hebergement h3 {
@@ -827,6 +838,14 @@ footer li {
   .nombre-logements {
     padding-left: 10px;
     padding-bottom: 20px;
+    font-size: 0.8125em; /*13px / 16px */
+    width: 83%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .nombre-logements p {
+    align-items: baseline;
   }
 
   .integralite-logements {
@@ -840,15 +859,24 @@ footer li {
 
   .contenu-bloc-populaires {
     display: flex;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .titre-bloc-populaires h2 {
     font-size: 1.125em;
   }
 
+  .liste-hebergements-populaires {
+    padding-top: 0;
+  }
+
   .card-bloc-populaires {
     display: flex;
-    width: 100%;
+    width: 92%;
+    max-width: 328px;
     border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
@@ -882,6 +910,8 @@ footer li {
 
   .contenu-bloc-hebergements h2 {
     font-size: 1.125em;
+    padding-bottom: 20px;
+    padding-top: 25px;
   }
 
   .liste-hebergements a {
@@ -891,15 +921,16 @@ footer li {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 326px;
     margin-bottom: 10px;
-    border-radius: 15px 0;
+    border-radius: 15px;
     box-shadow: -2px 4px 10px 0 #e0e0e0;
   }
 
   .card-bloc-hebergements img {
     height: 120px;
     width: 100%;
-    max-width: 290px;
+    max-width: 360px;
     object-position: center;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
@@ -934,6 +965,7 @@ footer li {
 
   .bloc-toutes-activites img {
     width: 100%;
+    max-width: 360px;
     height: 120px;
     object-fit: cover;
     object-position: top;
