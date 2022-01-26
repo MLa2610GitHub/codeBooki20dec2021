@@ -237,7 +237,7 @@ button .fas {
 }
 
 .nombre-logements p {
-  justify-content: baseline;
+  justify-content: center;
 }
 
 /*Marseille : les logements disponibles et les logements populaires*/
@@ -471,7 +471,7 @@ button .fas {
 .colonne-grande-photo {
   display: flex;
   flex-direction: column;
-  flex-basis: 22%;
+  width: 23%;
 }
 
 .activites-pomegues,
@@ -514,7 +514,7 @@ figcaption {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-basis: 24%;
+  width: 23%;
 }
 
 .petite-photo-activites-pomegues img,
@@ -692,6 +692,7 @@ footer li {
   .activites-garde {
     display: flex;
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .bloc-toutes-activites img {
@@ -839,11 +840,12 @@ footer li {
   .filtre-hebergement {
     height: 35px;
     margin-bottom: 5%;
+
   }
 
   .filtre-hebergement i {
-    height: 32px;
-    width: 32px;
+    height: 30px;
+    width: 35px;
     padding: 5px;
     margin-left: -2px;
     border-radius: 50%;
@@ -865,7 +867,7 @@ footer li {
   .integralite-logements {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0;
+    padding: 0 20px;
     width: auto;
   }
 
@@ -914,7 +916,7 @@ footer li {
     padding-left: 4px;
   }
   .card-bloc-populaires-etoiles {
-    padding-top: 38px;
+    padding-top: 28px;
   }
 
   .card-bloc-populaires-etoiles span,
@@ -980,6 +982,10 @@ footer li {
   .bloc-toutes-activites {
     display: flex;
     flex-direction: column;
+  }
+
+  .colonne-grande-photo, .colonne-petites-card-activites {
+    width: 100%;
   }
 
   figure a {
