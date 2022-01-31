@@ -570,13 +570,45 @@ footer li {
 
 /*Medium devices (tablets, less than 992px)*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  h1 {
+    font-size: 1.5625em; /*25px / 16px */
+  }
+
+  h2 {
+    font-size: 1.3125em; /*20px / 16px */
+  }
+  h3,
+  figcaption {
+    font-size: 1.125em; /*18px / 16px */
+  }
+
+  p,
+  .p-formulaire,
+  .nombre-logements,
+  li {
+    font-size: 1em; /*16px / 16px */
+  }
+
   #bloc-page {
     width: 70%;
     flex-direction: column;
   }
 
+  .logo-booki {
+    padding: 10px;
+  }
+
   #recherche-hebergements {
-    padding: 20px;
+    padding: 25px;
+  }
+
+  .h1-formulaire,
+  .p-formulaire {
+    text-align: center;
+  }
+
+  .form {
+    padding: 20px 60px;
   }
 
   .liste-filtres-recherche-hebergement {
@@ -586,6 +618,7 @@ footer li {
 
   .titre-filtres-recherche-hebergement {
     text-align: left;
+    width: 50%;
   }
 
   .filtre-hebergement {
@@ -615,6 +648,7 @@ footer li {
 
   .contenu-bloc-hebergements h2 {
     padding: 20px;
+    font-size: 1.375em; /*22px / 16px */
   }
   .liste-hebergements {
     display: flex;
@@ -632,14 +666,15 @@ footer li {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    max-width: 440px;
+    max-width: 500px;
     margin-bottom: 10px;
+    margin-right: 0;
   }
 
   .photo-card-hebergements img {
     object-fit: cover;
     object-position: center;
-    height: 170px;
+    height: 214px;
     width: 100%;
   }
 
@@ -655,10 +690,13 @@ footer li {
     order: 2;
     width: 100%;
     flex-direction: column;
-    padding-left: 20px;
     margin-bottom: 20px;
     margin-left: 0;
     background-color: #f2f2f2;
+  }
+
+  .titre-bloc-populaires {
+    font-size: 1.375em; /*22px / 16px */
   }
 
   .card-bloc-populaires {
@@ -675,16 +713,12 @@ footer li {
     object-position: center;
   }
 
-  .data-bloc-populaires {
-    padding-top: 20px;
-  }
-
   .nom-hotel-bloc-populaires {
-    padding-bottom: 20px;
+    padding-bottom: 5px;
   }
 
   .card-bloc-populaires-etoiles {
-    padding-top: 20px;
+    padding-top: 0;
   }
 
   .afficher-plus p {
@@ -694,6 +728,10 @@ footer li {
   #contenu-bloc-activites {
     display: flex;
     padding: 20px;
+  }
+
+  .titre-activites {
+    font-size: 1.375em; /*22px / 16px */
   }
 
   .bloc-toutes-activites {
@@ -767,7 +805,7 @@ footer li {
   }
 
   h2 {
-    font-size: 1.25em; /*20px / 16px */
+    font-size: 1.3125em; /*20px / 16px */
   }
   h3,
   figcaption {
@@ -938,7 +976,8 @@ footer li {
   }
 
   .titre-bloc-populaires h2 {
-    font-size: 1.3125em; /*21px / 16px */
+    font-size: 1.375em; /*22px / 16px */
+    font-weight: 800;
     margin-bottom: 20px;
     padding-left: 10px;
   }
@@ -958,7 +997,7 @@ footer li {
   }
 
   .card-bloc-populaires img {
-    height: 130px;
+    height: 140px;
     width: 100%;
     object-position: center;
     object-fit: cover;
@@ -971,14 +1010,20 @@ footer li {
 
   .nom-hotel-bloc-populaires {
     padding-right: 15px;
+    margin-top: 10px;
   }
+
+  .nom-hotel-bloc-populaires h3 {
+    margin-top: 5px;
+  }
+
   .card-bloc-populaires-etoiles {
-    padding-top: 5px;
+    padding-top: 22px;
   }
 
   .card-bloc-populaires-etoiles span,
   .card-bloc-hebergements-etoiles span {
-    font-size: 0.625em;
+    font-size: 0.75em; /*12px*/
   }
 
   #logements-region-marseille {
@@ -993,7 +1038,8 @@ footer li {
   }
 
   .contenu-bloc-hebergements h2 {
-    font-size: 1.3125em; /*21px / 16px */
+    font-size: 1.375em; /*22px / 16px */
+    font-weight: 800;
     padding: 25px 0 20px 10px;
   }
 
@@ -1038,6 +1084,8 @@ footer li {
   }
 
   .titre-activites {
+    font-size: 1.375em; /*22px / 16px */
+    font-weight: 800;
     padding: 0 10px;
   }
   #contenu-bloc-activites {
